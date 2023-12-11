@@ -1,100 +1,97 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
 const links = [
   {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
+    text: "1. Introdução ao JavaScript",
+    url: "intro-js",
+    description: "Explore o JavaScript como uma linguagem de programação de alto nível essencial para o desenvolvimento web. Descubra sua função crucial na criação de interatividade e dinamismo em páginas da web.",
   },
   {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
+    text: "2. Sintaxe Básica",
+    url: "sintaxe-basica",
+    description: "Desbrave os fundamentos do JavaScript, abordando variáveis para armazenar dados, tipos de dados (como números e strings) e operadores para manipular esses dados. Introduza estruturas de controle de fluxo para tomar decisões e repetições.",
   },
   {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
+    text: "3. Funções",
+    url: "funcoes",
+    description: "Compreenda o conceito de funções em JavaScript, desde a declaração até a chamada. Explore como usar parâmetros para tornar as funções mais flexíveis e o retorno de valores para obter resultados específicos.",
   },
   {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
+    text: "4. Manipulação de Arrays e Objetos",
+    url: "manipulacao-arrays-objetos",
+    description: "Aprofunde-se na manipulação de dados com arrays e objetos em JavaScript. Descubra os métodos poderosos disponíveis para trabalhar com arrays e como acessar e modificar dados em objetos.",
   },
-]
+  {
+    text: "5. Promises e Assíncrono",
+    url: "promises-assincrono",
+    description: "Explore o mundo assíncrono do JavaScript, entendendo como as Promises podem lidar com operações assíncronas de maneira mais eficiente. Introduza o uso de async e await para simplificar a lógica assíncrona.",
+  },
+  {
+    text: "6. DOM (Document Object Model)",
+    url: "dom",
+    description: "Mergulhe no DOM, a representação em árvore dos elementos HTML na página. Aprenda a selecionar elementos, manipular seu conteúdo e responder a eventos do usuário para criar experiências interativas.",
+  },
+  {
+    text: "7. AJAX e Requisições HTTP",
+    url: "ajax-requisicoes-http",
+    description: "Descubra como o JavaScript pode fazer solicitações HTTP assíncronas para recuperar ou enviar dados para um servidor. Explore as diferentes abordagens, como XMLHttpRequest e a Fetch API.",
+  },
+  {
+    text: "8. ES6 e Recursos Modernos",
+    url: "es6-recursos-modernos",
+    description: "Conheça as melhorias introduzidas no ECMAScript 6 (ES6), incluindo a sintaxe mais concisa, arrow functions, template literals, e a introdução de let e const para declaração de variáveis.",
+  },
+  {
+    text: "9. Ferramentas e Ambientes de Dev",
+    url: "ferramentas-ambientes-dev",
+    description: "Familiarize-se com as ferramentas que tornam o desenvolvimento JavaScript mais eficiente, desde escolher um editor de código até configurar seu ambiente de desenvolvimento para facilitar a codificação e a depuração.",
+  },
+  {
+    text: "10. Testes em JavaScript",
+    url: "testes-javascript",
+    description: "Descubra a importância dos testes em desenvolvimento de software. Introduza conceitos de teste unitário e frameworks populares, como Jest, para garantir a robustez do seu código.",
+  },
+  {
+    text: "11. Boas Práticas de Código",
+    url: "boas-praticas-codigo",
+    description: "Aprenda práticas recomendadas para escrever código limpo e legível. Explore a importância de padrões de codificação, como linting, e como eles podem melhorar a consistência do código.",
+  },
+  {
+    text: "12. Projetos Práticos",
+    url: "projetos-praticos",
+    description: "Aplique seus conhecimentos em projetos práticos. Desenvolva pequenas aplicações ou participe de desafios para solidificar e aplicar os conceitos aprendidos.",
+  },
+  {
+    text: "13. Recursos e Links Úteis",
+    url: "recursos-links-uteis",
+    description: "Explore uma lista cuidadosamente selecionada de recursos valiosos, incluindo documentações oficiais, tutoriais envolventes e cursos online. Esses recursos adicionais oferecem uma oportunidade para os aprendizes aprofundarem seus conhecimentos e explorarem tópicos específicos em JavaScript.",
+  },
+  {
+    text: "FAQ / Fórum",
+    url: "faq-forum",
+    description: "Este espaço permite que os visitantes do seu portfólio compartilhem dúvidas, experiências e soluções, fomentando uma comunidade de aprendizado em torno do JavaScript.",
+  },
+];
 
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
 
 const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
+  { text: "Github", url: "https://github.com/Rajora0" },
+  { text: "Likedin", url: "https://www.linkedin.com/in/rafael-rangel-841b2747/" }
 ]
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
   <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
+    <div>
+
+      <h1>Bem vindo ao conceitos basicos do JavaScript!</h1>
+
+      O curso de JavaScript oferece uma abordagem abrangente desde os fundamentos até conceitos avançados, proporcionando uma base sólida para quem deseja dominar essa linguagem de programação essencial para o desenvolvimento web. Os tópicos incluem sintaxe básica, manipulação de arrays e objetos, assincronicidade com Promises e async/await, interação com o DOM, requisições HTTP e manipulação de eventos.
+      Além disso, exploramos recursos modernos do ES6, ferramentas de desenvolvimento, testes unitários e boas práticas de código. O curso é enriquecido com projetos práticos para aplicação direta do conhecimento, garantindo que os alunos desenvolvam habilidades práticas e estejam preparados para enfrentar desafios reais no desenvolvimento web 
     </div>
     <ul className={styles.list}>
       {links.map(link => (
@@ -109,12 +106,14 @@ const IndexPage = () => (
         </li>
       ))}
     </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
+    <div className={styles.textCenter}>
+      {moreLinks.map((link, i) => (
+        <React.Fragment key={link.url}>
+          <a href={`${link.url}${utmParameters}`}>{link.text}</a>
+          {i !== moreLinks.length - 1 && <> · </>}
+        </React.Fragment>
+      ))}
+    </div>
   </Layout>
 )
 
